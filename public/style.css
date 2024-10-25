@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+#next-btn, #start-btn, #generate-report-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#timer, #score-container {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#student-name {
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 200px;
+}

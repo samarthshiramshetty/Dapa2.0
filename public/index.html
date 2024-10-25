@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAPA Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>DAPA</h1>
+        
+        <div id="login-container">
+            <h2>Login</h2>
+            <input type="text" id="student-name" placeholder="Name">
+            <select id="district">
+                <option value="District A">District A</option>
+                <option value="District B">District B</option>
+            </select>
+            <select id="school">
+                <option value="School 1">School 1</option>
+                <option value="School 2">School 2</option>
+            </select>
+            <select id="teacher">
+                <option value="Teacher X">Teacher X</option>
+                <option value="Teacher Y">Teacher Y</option>
+            </select>
+            <button id="login-btn">Login</button>
+        </div>
+
+        <div id="start-container" style="display: none;">
+            <h2>Start Quiz</h2>
+            <h3>Instructions</h3>
+            <ol>
+                <li>The DAPA consists of multiple categories.</li>
+                <li>Each question will be played as an audio.</li>
+                <li>You will have 10 seconds to answer each question verbally.</li>
+                <li>If you answer within 3 seconds, you'll get 1 point in the Instant Score.</li>
+                <li>If you answer between 5-10 seconds, you'll get 1 point in the Standard Score.</li>
+                <li>If you don't answer within 10 seconds or answer incorrectly, you'll get 1 point in the Wrong Score.</li>
+                <li>Only even-numbered questions (2nd, 4th, 6th, etc.) will be scored.</li>
+            </ol>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-content" style="display: none;">
+            <img id="question-image" src="" alt="Question Image">
+            <audio id="question-audio" src=""></audio>
+            <div id="speech-container">
+                <p id="speech-result"></p>
+            </div>
+            <div id="timer">Time Left: <span id="time-left">10</span></div>
+            <div id="score-container">
+                <div id="instant-score">Instant Score: 0</div>
+                <div id="standard-score">Standard Score: 0</div>
+                <div id="wrong-score">Wrong Score: 0</div>
+            </div>
+        </div>
+
+        <div id="result-container" style="display: none;">
+            <h2>Result</h2>
+            <p id="student-details"></p>
+            <p id="final-score"></p>
+            <button id="generate-report-btn">Generate Report</button>
+        </div>
+    </div>
+
+    <div id="admin-panel" style="display: none;">
+        <h2>Admin Panel</h2>
+        <select id="district-filter">
+            <option value="">All Districts</option>
+            <option value="District A">District A</option>
+            <option value="District B">District B</option>
+        </select>
+        <select id="school-filter">
+            <option value="">All Schools</option>
+            <option value="School 1">School 1</option>
+            <option value="School 2">School 2</option>
+        </select>
+        <select id="teacher-filter">
+            <option value="">All Teachers</option>
+            <option value="Teacher X">Teacher X</option>
+            <option value="Teacher Y">Teacher Y</option>
+        </select>
+        <input type="text" id="uniqueid-filter" placeholder="Unique ID">
+        <button id="filter-btn">Filter Results</button>
+        <div id="results-container"></div>
+    </div>
+    <button id="admin-panel-btn">Access Admin Panel</button>
+    </div>
+
+    <div id="admin-login" style="display: none;">
+        <h2>Admin Login</h2>
+        <input type="text" id="admin-username" placeholder="Username">
+        <input type="password" id="admin-password" placeholder="Password">
+        <button id="admin-login-btn">Login</button>
+    </div>
+
+    <div id="admin-panel" style="display: none;">
+        <h2>Admin Panel</h2>
+        <button id="admin-logout-btn">Logout</button>
+        <select id="district-filter">
+            <option value="">All Districts</option>
+            <option value="District A">District A</option>
+            <option value="District B">District B</option>
+        </select>
+        <select id="school-filter">
+            <option value="">All Schools</option>
+            <option value="School 1">School 1</option>
+            <option value="School 2">School 2</option>
+        </select>
+        <select id="teacher-filter">
+            <option value="">All Teachers</option>
+            <option value="Teacher X">Teacher X</option>
+            <option value="Teacher Y">Teacher Y</option>
+        </select>
+        <input type="text" id="uniqueid-filter" placeholder="Unique ID">
+        <button id="filter-btn">Filter Results</button>
+        <div id="results-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
